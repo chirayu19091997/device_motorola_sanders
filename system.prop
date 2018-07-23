@@ -21,7 +21,6 @@ av.offload.enable=false
 av.debug.disable.pers.cache=1
 persist.audio.endcall.delay=250
 qcom.hw.aac.encoder=false
-
 persist.audio.calfile0=/etc/acdbdata/Bluetooth_cal.acdb
 persist.audio.calfile1=/etc/acdbdata/General_cal.acdb
 persist.audio.calfile2=/etc/acdbdata/Global_cal.acdb
@@ -29,14 +28,12 @@ persist.audio.calfile3=/etc/acdbdata/Handset_cal.acdb
 persist.audio.calfile4=/etc/acdbdata/Hdmi_cal.acdb
 persist.audio.calfile5=/etc/acdbdata/Headset_cal.acdb
 persist.audio.calfile6=/etc/acdbdata/Speaker_cal.acdb
-
 persist.vendor.audio.fluence.speaker=false
 persist.vendor.audio.fluence.voicecall=true
 persist.vendor.audio.fluence.voicecomm=true
 persist.vendor.audio.fluence.voicerec=false
 ro.qc.sdk.audio.fluencetype=none
 ro.qc.sdk.audio.ssr=false
-
 vendor.use.voice.path.for.pcm.voip=false
 
 # Bluetooth
@@ -104,7 +101,7 @@ persist.hwc.mdpcomp.enable=true
 dev.pm.dyn_samplingrate=1
 persist.demo.hdmirotationlock=false
 ro.opengles.version=196610
-ro.sf.lcd_density=480
+ro.sf.lcd_density=420
 persist.debug.wfd.enable=1
 sdm.debug.disable_skip_validate=1
 debug.gralloc.enable_fb_ubwc=1
@@ -117,7 +114,7 @@ debug.enable.sglscale=1
 # FM
 ro.fm.transmitter=false
 
-#HWUI properties
+# HWUI properties
 ro.hwui.texture_cache_size=72
 ro.hwui.layer_cache_size=48
 ro.hwui.r_buffer_cache_size=8
@@ -146,6 +143,8 @@ persist.ims.vt=false
 persist.ims.vt.epdg=false
 persist.mm.sta.enable=0
 persist.vt.supported=0
+persist.volte_enabled_by_hw=1
+persist.dbg.volte_avail_ovr=1
 
 # Media
 media.aac_51_output_enabled=true
@@ -209,6 +208,7 @@ ro.telephony.call_ring.multiple=false
 persist.vendor.radio.eri64_as_home=1
 persist.vendor.radio.data_con_rprt=1
 
+# Netmgrd
 ro.use_data_netmgrd=true
 persist.data.qmi.adb_logmask=0
 persist.data.netmgrd.qos.enable=true
@@ -233,7 +233,7 @@ ro.mot.sensors.glance_approach=false
 # SensorService
 system_init.startsensorservice=0
 
-#Trim properties
+# Trim properties
 ro.vendor.qti.sys.fw.trim_enable_memory=2147483648
 
 # USB
@@ -250,3 +250,8 @@ ro.usb.bpteth_adb=0x2ee8
 ro.vendor.extension_library=libqti-perfd-client.so
 ro.vendor.at_library=libqti-at.so
 ro.vendor.gt_library=libqti-gt.so
+
+# Default Lte selection
+telephony.lteOnGsmDevice=1 
+ro.telephony.default_network=9
+ro.ril.def.preferred.network=9
