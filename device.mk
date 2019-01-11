@@ -134,7 +134,7 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.mapper@2.0-impl \
     android.hardware.memtrack@1.0-impl \
     android.hardware.memtrack@1.0-service \
-    android.hardware.configstore@1.0-service \
+    android.hardware.configstore@1.1-service \
     hwcomposer.msm8953 \
     memtrack.msm8953 \
     libgenlock \
@@ -364,7 +364,7 @@ PRODUCT_PACKAGES += \
 
 #RIL
 PRODUCT_PACKAGES += \
-    android.hardware.radio@1.0
+    android.hardware.radio@1.1
 
 # Seccomp policy
 PRODUCT_COPY_FILES += \
@@ -410,6 +410,7 @@ PRODUCT_PACKAGES += \
 # Wifi
 PRODUCT_PACKAGES += \
     android.hardware.wifi@1.0-service \
+    android.hardware.wifi.supplicant@1.0 \
     hostapd \
     libqsap_sdk \
     libwpa_client \
