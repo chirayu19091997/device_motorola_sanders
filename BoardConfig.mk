@@ -77,9 +77,8 @@ TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_CONFIG := sanders_defconfig
 TARGET_KERNEL_SOURCE := kernel/motorola/sanders
-KERNEL_TOOLCHAIN := $(PWD)/prebuilts/gcc/$(HOST_OS)-x86/aarch64/aarch64-linux-android-4.9/bin
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-androidkernel-
-TARGET_USE_SDCLANG := true
+#TARGET_USE_SDCLANG := true
 
 # Audio
 BOARD_USES_ALSA_AUDIO := true
