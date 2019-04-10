@@ -307,6 +307,10 @@ PRODUCT_COPY_FILES += \
      $(LOCAL_PATH)/configs/perf/targetconfig.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perf/targetconfig.xml \
      $(LOCAL_PATH)/configs/perf/targetresourceconfigs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perf/targetresourceconfigs.xml
 
+# Enforce RRO only for framework-res
+PRODUCT_ENFORCE_RRO_TARGETS := \
+    framework-res
+
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power@1.1-service-qti
