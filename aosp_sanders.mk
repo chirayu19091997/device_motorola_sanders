@@ -15,18 +15,26 @@
 # limitations under the License.
 
 # Inherit from those products. Most specific first.
-$(call inherit-product, device/motorola/sanders/full_sanders.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common SacredOS stuff.
-$(call inherit-product, vendor/sacred/common.mk)
+# Inherit from sanders device
+$(call inherit-product, device/motorola/sanders/device.mk)
+$(call inherit-product-if-exists, vendor/motorola/sanders/sanders-vendor.mk)
+
+# Inherit some common ROM stuff.
+$(call inherit-product, vendor/aosp/config/common.mk)
+
+TARGET_GAPPS_ARCH := arm64
 
 # Boot animation
 TARGET_SCREEN_WIDTH := 1080
 TARGET_SCREEN_HEIGHT := 1920
+TARGET_BOOT_ANIMATION_RES :=1080
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := sanders
-PRODUCT_NAME := sacred_sanders
+PRODUCT_NAME := aosp_sanders
 PRODUCT_BRAND := motorola
 PRODUCT_MANUFACTURER := motorola
 
@@ -37,5 +45,5 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="sanders-user 8.1.0 OPS28.65-36 9fea release-keys"
 
 # FINGERPRINT
-BUILD_FINGERPRINT := google/walleye/walleye:9/PPP3.180510.008/4811556:user/release-keys 
+BUILD_FINGERPRINT := google/walleye/walleye:9/PPP3.180510.008/4811556:user/release-keys
 VENDOR_BUILD_FINGERPRINT := google/walleye/walleye:9/PPP3.180510.008/4811556:user/release-keys

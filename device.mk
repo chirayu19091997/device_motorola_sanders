@@ -358,9 +358,6 @@ PRODUCT_PACKAGES += \
     libprotobuf-cpp-full \
     libprotobuf-cpp-lite \
     libxml2
-
-#RIL
-PRODUCT_PACKAGES += \
     android.hardware.radio@1.1
 
 # Seccomp policy
