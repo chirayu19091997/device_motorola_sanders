@@ -360,7 +360,7 @@ PRODUCT_PACKAGES += \
     librmnetctl \
     libprotobuf-cpp-full \
     libprotobuf-cpp-lite \
-    libxml2
+    libxml2 \
     android.hardware.radio@1.1
 
 # Seccomp policy
