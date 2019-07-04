@@ -445,8 +445,7 @@ PRODUCT_COPY_FILES += \
 # TEMP FIX
 PRODUCT_PACKAGES += \
     android.hidl.base@1.0 \
-    android.hidl.manager@1.0 \
-    android.hidl.manager-V1.0-java
+    android.hidl.manager@1.0
 
 # Wi-Fi Display
 PRODUCT_BOOT_JARS += \
